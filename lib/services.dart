@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter_webview_test/constants.dart';
+import 'package:flutter_test_webview/constants.dart';
 import 'package:http/http.dart' as http;
 import 'package:uuid/uuid.dart';
 

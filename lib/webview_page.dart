@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_test/constants.dart';
-import 'package:flutter_webview_test/session_id.dart';
+import 'package:flutter_test_webview/constants.dart';
+import 'package:flutter_test_webview/session_id.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class TestWebviewPage extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:flutter_webview_test/services.dart';
+import 'package:flutter_test_webview/services.dart';
 
 class SessionIdManager {
   static final SessionIdManager _manager = SessionIdManager._internal();
