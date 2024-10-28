@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_test/constants.dart';
+import 'package:flutter_webview_test/session_id.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class TestWebviewPage extends StatefulWidget {
@@ -25,14 +26,15 @@ class _TestWebviewPageState extends State<TestWebviewPage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() {
-      return controller
+    Future.microtask(() async {
+      String sessionId = await SessionIdManager().sessionId ?? Constants.url;
+      controller
         ..setJavaScriptMode(JavaScriptMode.unrestricted)
         ..setNavigationDelegate(
           NavigationDelegate(),
         )
         ..loadRequest(
-          Uri.parse(widget.url ?? Constants.url),
+          Uri.parse(widget.url ?? Constants.pageUrl(sessionId)),
           headers: widget.headers,
         );
       // controller.addJavaScriptChannel(name, onMessageReceived: onMessageReceived);
